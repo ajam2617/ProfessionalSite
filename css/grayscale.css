@@ -210,7 +210,7 @@
 }
 
 .signup-section1 {
-  padding: 10rem 0;
+  padding: 2rem 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-masthead.jpg");
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");
   background-position: center;
@@ -220,8 +220,21 @@
 }
 
 /* pie chart container */
-#container {
-  width: 100%;
+#personal-graph {
+  width: fit-content;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+  background: #CCC;
+  filter: alpha(opacity=80);
+  /* IE */
+  -moz-opacity: 0.6;
+  /* Mozilla */
+  opacity: 0.6;
+}
+
+#work-graph {
+  width: fit-content;
   height: 50vh;
   margin: 0;
   padding: 0;

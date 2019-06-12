@@ -41,18 +41,18 @@
 
   //Any Chart for time spent
   anychart.onDocumentReady(function () {
-    var chart = anychart.pie([
-        {x: "Building Apps", value: 10},
-        {x: "Kayaking", value: 12},
-        {x: "Playing Piano", value: 5},
-        {x: "Learning new coding languages", value: 18},
-        {x: "Studying Reiki", value: 9}
+    var chart1 = anychart.pie([
+        {x: "Loving puppies and kittens", value: 22},
+        {x: "Kayaking", value: 10},
+        {x: "Playing Piano", value: 10},
+        {x: "Stuck in traffic", value: 18},
+        {x: "Studying Reiki", value: 40}
     ]);
 
-    chart.innerRadius("55%");
+    chart1.innerRadius("60%");
 
     var label = anychart.standalones.label();
-    label.text("Activities");
+    label.text("Personal");
     label.width("100%");
     label.height("100%");
     label.adjustFontSize(true);
@@ -61,14 +61,49 @@
     label.vAlign("middle");
 
     // set the label as the center content
-    chart.center().content(label);
+    chart1.center().content(label);
 
     //adding monochrome color palette
-    chart.palette(anychart.palettes.turquoise);
+    chart1.palette(anychart.palettes.turquoise);
 
 
-    chart.container("container");
-    chart.draw();
+    chart1.container("personal-graph");
+    chart1.draw();
+
+    
+});
+
+anychart.onDocumentReady(function () {
+  var chart2 = anychart.pie([
+      {x: "Building Apps", value: 35},
+      {x: "Networking", value: 15},
+      {x: "Reading", value: 26},
+      {x: "Learning new coding languages", value: 15},
+      {x: "Algorithm practice", value: 9}
+  ]);
+
+  chart2.innerRadius("60%");
+
+  var label = anychart.standalones.label();
+  label.text("Work");
+  label.width("100%");
+  label.height("100%");
+  label.adjustFontSize(true);
+  label.fontColor("#60727b");
+  label.hAlign("center");
+  label.vAlign("middle");
+
+  // set the label as the center content
+  chart2.center().content(label);
+
+  //adding monochrome color palette
+  chart2.palette(anychart.palettes.turquoise);
+
+
+  chart2.container("work-graph");
+  chart2.draw();
+
+  
 });
 
 })(jQuery); // End of use strict
